@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PulsePlay: Live Twitch & YouTube Gaming Dashboard for gamers, streams, news, and esports.">
+  <meta name="keywords" content="Gaming, Twitch, YouTube, Esports, PulsePlay, Live Streams, Gaming News">
+  <meta name="author" content="PulsePlay Team">
+  <meta name='impact-site-verification' value='b6662eae-9a7b-49db-ac98-caaf08948b5e'>  
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <title>PulsePlay - Gaming Hub</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Neon Background Grid & Floating Particles -->
+  <div class="neon-bg-grid" aria-hidden="true"></div>
+  <div class="neon-particles" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header>
+    <h1>⚡ PulsePlay</h1>
+    <p class="tagline">Your Gaming Universe • Streams • News • Esports</p>
+    <nav aria-label="Main Navigation">
+      <a href="index.html" class="nav-link neon-btn">Home</a>
+  <a href="streams.html" class="nav-link neon-btn">Streams</a>
+  <a href="news.html" class="nav-link neon-btn">Gaming News</a>
+  <a href="esports.html" class="nav-link neon-btn">Esports</a>
+  <a href="affiliates.html" class="nav-link neon-btn">Affiliate Deals</a>
+  <a href="contact.html" class="nav-link neon-btn">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Discord CTA -->
+  <section class="discord-cta" aria-label="Discord Call to Action">
+    <a href="https://discord.gg/Zxm7wYXT" target="_blank" rel="noopener noreferrer" class="discord-btn neon-btn">
+      <img src="image/discord-icon.png" class="discord-icon">
+      ⚡ Join PulsePlay Discord
+    </a>
+  </section>
+
+  <!-- Marquee -->
+  <section class="marquee" aria-label="Trending Now">
+    <p>🔥 Trending Now: Cyberpunk 2077 Patch 2.31 • VALORANT Champions Paris • GTA VI Teasers • Elden Ring DLC</p>
+  </section>
+
+  <!-- Featured Clips -->
+  <section class="featured-video">
+    <h2>🎬 Featured Clips</h2>
+    <div id="featured-clips" class="video-grid" role="region" aria-label="Featured Video Clips"></div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="section multi-platform-cards">
+  <div class="container">
+    <h2>⚡ Multi-Platform Featured Creators</h2>
+
+    <div class="cards-container" id="multiCards">
+
+      <!-- Twitch: Jacksepticeye -->
+      <article class="streamer-card" data-platform="twitch" data-username="jacksepticeye">
+        <img class="avatar" alt="Jacksepticeye profile">
+        <div class="header">
+          <h3>Jacksepticeye</h3>
+          <span class="status-badge">Checking…</span>
+        </div>
+        <p class="game">Loading game...</p>
+        <p class="title">Loading title...</p>
+        <p class="viewers">0 viewers</p>
+        <a class="neon-btn link" href="#" target="_blank" rel="noopener noreferrer">Watch</a>
+        <div class="preview-embed"></div>
+      </article>
+
+      <!-- Twitch: Game Grumps -->
+      <article class="streamer-card" data-platform="twitch" data-username="gamegrumps">
+        <img class="avatar" alt="Game Grumps profile">
+        <div class="header">
+          <h3>Game Grumps</h3>
+          <span class="status-badge">Checking…</span>
+        </div>
+        <p class="game">Loading game...</p>
+        <p class="title">Loading title...</p>
+        <p class="viewers">0 viewers</p>
+        <a class="neon-btn link" href="#" target="_blank" rel="noopener noreferrer">Watch</a>
+        <div class="preview-embed"></div>
+      </article>
+
+      <!-- YouTube: Jacksepticeye -->
+      <article class="streamer-card" data-platform="youtube" data-channel-id="UCX6OQ3DkcsbYNE6H8uQQuVA">
+        <img class="avatar" alt="Jacksepticeye YouTube profile">
+        <div class="header">
+          <h3>Jacksepticeye</h3>
+        </div>
+        <p class="title">Loading latest video...</p>
+        <p class="views"></p>
+        <a class="neon-btn link" href="#" target="_blank" rel="noopener noreferrer">Watch</a>
+      </article>
+
+      <!-- Twitch: Your account -->
+      <article class="streamer-card" data-platform="twitch" data-username="kiritart83">
+        <p>Coming Soon</p>
+      </article>
+
+      <!-- YouTube: Your channel -->
+      <article class="streamer-card" data-platform="youtube" data-channel-id="YOUR_YOUTUBE_CHANNEL_ID">
+        <p>Coming Soon</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+      <footer class="site-footer">
+  <div class="container">
+
+    <p>© 2025 PulsePlay — Built for Gamers ⚡</p>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a> •
+      <a href="streams.html">Streams</a> •
+      <a href="news.html">News</a> •
+      <a href="esports.html">Esports</a> •
+      <a href="affiliates.html">Affiliates</a> •
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <a 
+      href="https://discord.gg/Zxm7wYXT"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="discord-btn neon-btn"
+    >
+      Join Our Discord
+    </a>
+
+  </div>
+</footer>
+
+</body>
+</html>
