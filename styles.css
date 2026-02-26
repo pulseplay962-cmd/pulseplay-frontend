@@ -1,0 +1,491 @@
+/* ===== Base Styles ===== */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at top left, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  background: linear-gradient(270deg, #ff3c00, #ff9500, #ff3c00);
+  background-size: 600% 600%;
+  padding: 2rem 1rem;
+  border-bottom: 4px solid #ff3c00;
+  animation: gradientShift 8s ease infinite;
+  box-shadow: 0 0 20px #ff3c00, 0 0 40px #ff9500;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 10px #ff3c00, 0 0 20px #ff9500, 0 0 40px #ff3c00;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #eee;
+  text-shadow: 0 0 5px #ff9500;
+}
+
+/* ===== Nav / Buttons ===== */
+.nav-link, .discord-btn, .watch-btn, .affiliate-btn, .neon-btn {
+  display: inline-block;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.neon-btn {
+  color: #00fff7;
+  border: 2px solid #00fff7;
+  text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+  box-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+  animation: neonPulse 2s infinite;
+}
+
+.neon-btn:hover {
+  background-color: #00fff7;
+  color: #0d0d0d;
+  box-shadow: 0 0 20px #00fff7, 0 0 40px #00fff7, 0 0 60px #00fff7;
+  transform: scale(1.05);
+}
+
+/* ===== Discord CTA ===== */
+.discord-cta {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.discord-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* ===== Marquee ===== */
+.marquee {
+  background: #111;
+  color: #00fff7;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.7rem;
+  box-shadow: 0 0 15px #00fff7;
+}
+
+.marquee p {
+  display: inline-block;
+  animation: neonScroll 15s linear infinite;
+  text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+}
+
+/* ===== Main & Cards ===== */
+main {
+  padding: 2rem;
+}
+
+h2 {
+  color: #00fff7;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 0 0 8px #00fff7, 0 0 15px #00b3b3;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  background: rgba(0,0,0,0.5);
+  border: 2px solid #00fff7;
+  border-radius: 12px;
+  width: 250px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px #00fff7, 0 0 20px #00b3b3;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: neonPulse 3s infinite;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00fff7, 0 0 50px #00b3b3;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.2);
+}
+
+/* Badges */
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+.badge.live {
+  background: linear-gradient(90deg, #ff3c00, #ff9500);
+  box-shadow: 0 0 6px #ff3c00, 0 0 12px #ff9500;
+}
+
+.badge.trending {
+  background: linear-gradient(90deg, #00fff7, #00b3b3);
+  box-shadow: 0 0 6px #00fff7, 0 0 12px #00b3b3;
+}
+
+/* Featured Videos / Grid */
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.video-grid iframe {
+  border: 2px solid #00fff7;
+  border-radius: 12px;
+  width: 360px;
+  height: 203px;
+  box-shadow: 0 0 10px #00fff7, 0 0 20px #00b3b3;
+  animation: neonPulse 3s infinite;
+}
+
+.featured-video h2 {
+  color: #00fff7;
+  text-align: center;
+  text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+}
+
+/* Neon Background Grid & Particles */
+.neon-bg-grid {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: 
+    linear-gradient(90deg, rgba(0,255,247,0.05) 1px, transparent 1px),
+    linear-gradient(rgba(0,255,247,0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -2;
+  animation: gridMove 20s linear infinite;
+}
+
+.neon-particles {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #0ff;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: float 5s linear infinite;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(270deg, #ff3c00, #ff9500, #ff3c00);
+  animation: gradientShift 8s ease infinite;
+  border-top: 4px solid #ff3c00;
+  box-shadow: 0 -0 20px #ff3c00;
+}
+
+/* ===== Animations ===== */
+@keyframes neonPulse {
+  0%, 100% { text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7; box-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7; }
+  50% { text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 30px #00fff7; box-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 30px #00fff7; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes neonScroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes pulseGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gridMove {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 50px 50px, 50px 50px; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+}
+
+/* ===== Twitch / YouTube Live Cards ===== */
+.card.live {
+  border-color: #ff0055;
+  box-shadow: 0 0 15px #ff0055, 0 0 30px #ff0055 inset;
+}
+
+.card.live:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #ff0055, 0 0 50px #ff0055 inset;
+}
+
+.card.youtube:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00aaff, 0 0 30px #00aaff inset;
+}
+
+.card .live-badge {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #ff0055;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* ===== Affiliates ===== */
+.affiliates {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+}
+
+.affiliate-card {
+  background: #0a0a0f;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.affiliate-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+}
+
+.affiliate-card h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  color: #00ffe7;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+}
+
+.affiliate-card p {
+  color: #ddd;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.affiliate-card .neon-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #00f0ff, #ff00f0);
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6),
+              0 0 25px rgba(255, 0, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.affiliate-card .neon-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.9),
+              0 0 40px rgba(255, 0, 255, 0.6);
+}
+.affiliate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.affiliate-card {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #0ff;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.affiliate-card img {
+  margin-bottom: 1rem;
+}
+
+.affiliate-banner {
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+.streamer-cards .cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.streamer-card {
+  background: rgba(10, 10, 20, 0.85);
+  border: 1px solid #27f3ff;
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 0 18px rgba(39, 243, 255, 0.3);
+  backdrop-filter: blur(6px);
+  text-align: center;
+}
+
+.streamer-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: .35rem;
+}
+
+.streamer-card p {
+  opacity: .8;
+  margin-bottom: 1rem;
+}
+.streamer-cards .cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.streamer-card {
+  background: rgba(10, 10, 20, 0.9);
+  border: 1px solid #27f3ff;
+  border-radius: 20px;
+  padding: 1.25rem;
+  box-shadow: 0 0 18px rgba(39, 243, 255, 0.3);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Avatar */
+.streamer-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid #27f3ff;
+  margin-bottom: .75rem;
+}
+
+/* Header row */
+.streamer-header {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  align-items: center;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: .8rem;
+  color: black;
+}
+
+/* Status colors */
+.status-live {
+  background: #3cff6a;
+}
+
+.status-offline {
+  background: #ff3c55;
+  color: white;
+}
+
+/* Now playing text */
+.streamer-game {
+  opacity: .85;
+  margin: .35rem 0 1rem;
+}
+
+/* Hover stream preview */
+.preview-embed {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: .25s ease;
+  pointer-events: none;
+}
+
+.streamer-card:hover .preview-embed {
+  opacity: 1;
+}
+
+.preview-embed iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+}
+.streamer-title {
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin: 0.25rem 0;
+}
+
+.streamer-viewers {
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  color: #3cff6a;
+}
